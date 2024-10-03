@@ -12,4 +12,4 @@ lb, ub = bounded_cl_system.compute_bounds(x=(range_tensor,), method="backward")
 self.reachable_sets[i].populate_next_reachable_set(self.bounded_cl_system, self.reachable_sets[i+1])
 
 ######################################## Problem 4 ########################################
-self.reachable_sets[i].populate_next_reachable_set(self.bounded_cl_system, self.reachable_sets[i+1])
+self.reachable_sets[0].populate_next_reachable_set(self.bounded_cl_systems[i], self.reachable_sets[i+1])
