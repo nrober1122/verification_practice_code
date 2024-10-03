@@ -19,3 +19,20 @@ should give you a `NotImplementedError`. This is becuase there are several thing
 Problems 1 and 2 will help train you by directly interfacing with functions from auto_LiRPA (refer to `third_party/auto_LiRPA/examples/simple/mip_lp_solver.py` to see examples on how the relavent functions work), while problems 3 and 4 use the provided code to conduct both concrete and symbolic reachability analyses.
 Solutions to each problem can be found in `solutions.txt` if you are really stuck. Reach out to me if you have any questions!
 
+Once you are done inserting the code, the command 
+```
+$ python verification_practice/src/test.py --config configs/default_concrete.yaml
+```
+should produce an image that looks like this:
+
+<img src="images/tutorial_1.png" width="600">
+
+Similarly, the command 
+```
+$ python verification_practice/src/test.py --config configs/default_symbolic.yaml
+```
+should produce an image that looks like this:
+
+<img src="images/tutorial_2.png" width="600">
+
+Good luck!
