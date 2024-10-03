@@ -118,11 +118,6 @@ class ReachableSet:
                 raise NotImplementedError
 
             range_tensor = get_bounded_tensor(self.full_set)
-            
-            # x = torch.mean(self.full_set, axis=1).reshape((1, -1))
-            # eps = (self.full_set[:, 1] - self.full_set[:, 0])/2
-            # ptb = PerturbationLpNorm(eps = eps)
-            # range_tensor = BoundedTensor(x, ptb)
 
             if training:
                 pass
