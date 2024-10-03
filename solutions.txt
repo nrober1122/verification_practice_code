@@ -1,0 +1,15 @@
+######################################## Problem 1 ########################################
+x = torch.mean(state_range, axis=1).reshape((1, -1))
+eps = (state_range[:, 1] - state_range[:, 0])/2
+ptb = PerturbationLpNorm(eps = eps)
+range_tensor = BoundedTensor(x, ptb)
+return range_tensor
+
+######################################## Problem 2 ########################################
+lb, ub = bounded_cl_system.compute_bounds(x=(range_tensor,), method="backward")
+
+######################################## Problem 3 ########################################
+self.reachable_sets[i].populate_next_reachable_set(self.bounded_cl_system, self.reachable_sets[i+1])
+
+######################################## Problem 4 ########################################
+self.reachable_sets[i].populate_next_reachable_set(self.bounded_cl_system, self.reachable_sets[i+1])
