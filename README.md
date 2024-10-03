@@ -11,9 +11,9 @@ $ pip install -e third_party/auto_LiRPA
 ```
 # Running the Code
 If everything is installed correctly, the command 
-``
+```
 $ python verification_practice/src/test.py --config configs/default_concrete.yaml
-``
+```
 should give you a `NotImplementedError`. This is becuase there are several things in the file `verification_practice/src/utils/robust_training_utils.py` file that need to be implemented. Specifically, there are four problems (lines 112, 135, 275, and 309) each of which need a small amount of code added to complete the file.
 
 Problems 1 and 2 will help train you by directly interfacing with functions from auto_LiRPA (refer to `third_party/auto_LiRPA/examples/simple/mip_lp_solver.py` to see examples on how the relavent functions work), while problems 3 and 4 use the provided code to conduct both concrete and symbolic reachability analyses.
