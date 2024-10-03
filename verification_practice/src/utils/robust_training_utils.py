@@ -115,11 +115,6 @@ class ReachableSet:
             #                                    [x1_min, x1_max])
             # output: BoundedTensor; auto_LiRPA object
             def get_bounded_tensor(state_range: torch.tensor) -> BoundedTensor:
-                # x = torch.mean(state_range, axis=1).reshape((1, -1))
-                # eps = (state_range[:, 1] - state_range[:, 0])/2
-                # ptb = PerturbationLpNorm(eps = eps)
-                # range_tensor = BoundedTensor(x, ptb)
-                # return range_tensor
                 raise NotImplementedError
 
             range_tensor = get_bounded_tensor(self.full_set)

@@ -51,6 +51,8 @@ def main_forward_nick(params: dict) -> Tuple[Dict, Dict]:
         if params["analysis"]["mode"] == 'symbolic':
             reach_set_dict, info = analyzer.calculate_N_step_reachable_sets(indices=None, condition=di_condition)
         elif params["analysis"]["mode"] == 'concrete':
+            # we do some partitioning to keep things reasonable
+            analyzer.set_partition_strategy(0, np.array([4,4]))
             reach_set_dict, info = analyzer.calculate_reachable_sets(training=False, autorefine=False, visualize=False, condition=di_condition)
         elif params["analysis"]["mode"] == 'CARV':
             reach_set_dict, info = analyzer.calculate_reachable_sets(training=False, autorefine=False, visualize=False, condition=di_condition)
