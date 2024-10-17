@@ -6,7 +6,7 @@ First, it is recommended to set up a virtual environment. This code was develope
 
 Once your virtual environment is active, install the repo's dependencies with the following commands:
 ```
-$ pip install -r requirements.text
+$ pip install -r actual_requirements.txt
 $ pip install -e third_party/auto_LiRPA
 ```
 # Running the Code
